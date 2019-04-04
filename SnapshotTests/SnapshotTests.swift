@@ -8,27 +8,26 @@
 
 import XCTest
 import FBSnapshotTestCase
+@testable import Snapshot_Testing
 
-class SnapshotTests: XCTestCase {
-
+class SnapshotTests: FBSnapshotTestCase {
+    
     override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        super.setUp()
+        recordMode = true
     }
 
     func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
+        let marketOpenTime = DisplayedTime(hour: 08, minute: 00)
+        let marketCloseTime = DisplayedTime(hour: 22, minute: 00)
+        let marketHourSessions = MarketHoursSession(marketOpenTime: marketOpenTime, marketCloseTime: marketCloseTime)
+        let currentTime = DisplayedTime(hour: 14, minute: 00)
+        let marketDisplayInfo = MarketDisplayInfo(marketHoursSessions: [marketHourSessions], currentTime: currentTime, isOpen: true, nextMarketStatusChangeText: "Closes in 8 hours")
+        
+        let view = MarketHoursView()
+        view.setUp(withMarketDisplayInfo: marketDisplayInfo)
+        view.frame = CGRect(origin: .zero, size: CGSize(width: 420, height: 100))
 
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+        FBSnapshotVerifyView(view)
     }
-
 }
