@@ -31,5 +31,6 @@ Take a look at the documentation at https://github.com/uber/ios-snapshot-test-ca
     |:---|:----|
     |`FB_REFERENCE_IMAGE_DIR`|`$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/ReferenceImages`|
     |`IMAGE_DIFF_DIR`|`$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/FailureDiffs`|
+    ![](ENVIRONMETAL_VARIABLES.png)
 
     Of course you can set any folder you want inside your project.
