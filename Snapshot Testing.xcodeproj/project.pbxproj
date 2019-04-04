@@ -15,6 +15,10 @@
 		FDB413512256609E00CAE36F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB413502256609E00CAE36F /* Assets.xcassets */; };
 		FDB413542256609E00CAE36F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB413522256609E00CAE36F /* LaunchScreen.storyboard */; };
 		FDB413622256611000CAE36F /* SnapshotTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB413612256611000CAE36F /* SnapshotTests.swift */; };
+		FDB4136E225662C300CAE36F /* MarketHoursRangeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4136A225662C300CAE36F /* MarketHoursRangeView.swift */; };
+		FDB4136F225662C300CAE36F /* MarketHoursView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4136B225662C300CAE36F /* MarketHoursView.swift */; };
+		FDB41370225662C300CAE36F /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4136C225662C300CAE36F /* PaddingLabel.swift */; };
+		FDB41371225662C300CAE36F /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4136D225662C300CAE36F /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +47,10 @@
 		FDB4135F2256611000CAE36F /* SnapshotTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SnapshotTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB413612256611000CAE36F /* SnapshotTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTests.swift; sourceTree = "<group>"; };
 		FDB413632256611000CAE36F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDB4136A225662C300CAE36F /* MarketHoursRangeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketHoursRangeView.swift; sourceTree = "<group>"; };
+		FDB4136B225662C300CAE36F /* MarketHoursView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarketHoursView.swift; sourceTree = "<group>"; };
+		FDB4136C225662C300CAE36F /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		FDB4136D225662C300CAE36F /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		FE73690B6FD339196985C537 /* Pods_Snapshot_Testing.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapshot_Testing.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -109,6 +117,7 @@
 		FDB413482256609D00CAE36F /* Snapshot Testing */ = {
 			isa = PBXGroup;
 			children = (
+				FDB413692256629100CAE36F /* Views */,
 				FDB413492256609D00CAE36F /* AppDelegate.swift */,
 				FDB4134B2256609D00CAE36F /* ViewController.swift */,
 				FDB4134D2256609D00CAE36F /* Main.storyboard */,
@@ -126,6 +135,17 @@
 				FDB413632256611000CAE36F /* Info.plist */,
 			);
 			path = SnapshotTests;
+			sourceTree = "<group>";
+		};
+		FDB413692256629100CAE36F /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FDB4136D225662C300CAE36F /* Helper.swift */,
+				FDB4136A225662C300CAE36F /* MarketHoursRangeView.swift */,
+				FDB4136B225662C300CAE36F /* MarketHoursView.swift */,
+				FDB4136C225662C300CAE36F /* PaddingLabel.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -326,8 +346,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FDB4136F225662C300CAE36F /* MarketHoursView.swift in Sources */,
+				FDB41370225662C300CAE36F /* PaddingLabel.swift in Sources */,
 				FDB4134C2256609D00CAE36F /* ViewController.swift in Sources */,
 				FDB4134A2256609D00CAE36F /* AppDelegate.swift in Sources */,
+				FDB4136E225662C300CAE36F /* MarketHoursRangeView.swift in Sources */,
+				FDB41371225662C300CAE36F /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
