@@ -71,7 +71,7 @@ class MarketHoursView: UIView {
             let label = UILabel()
             label.translatesAutoresizingMaskIntoConstraints = false
             label.text = "\(i * 2)"
-            label.textColor = UIColor.gray
+            label.textColor = UIColor.lightGray
             stackView.addArrangedSubview(label)
         }
         return stackView
