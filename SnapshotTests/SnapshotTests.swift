@@ -25,7 +25,7 @@ class SnapshotTests: FBSnapshotTestCase {
             applyTheme(theme)
             
             let marketHourView = MarketHoursView()
-            let marketHourSessions = MarketHoursSession(marketOpenTime: DisplayedTime(hour: 08, minute: 00), marketCloseTime: DisplayedTime(hour: 22, minute: 00))
+            let marketHourSessions = MarketHoursSession(marketOpenTime: DisplayedTime(hour: 08, minute: 00), marketCloseTime: DisplayedTime(hour: 21, minute: 00))
 
             let marketDisplayInfo = MarketDisplayInfo(marketHoursSessions: [marketHourSessions], currentTime: DisplayedTime(hour: 14, minute: 00), isOpen: true, nextMarketStatusChangeText: "Closes in 8 hours")
             
