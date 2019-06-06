@@ -31,6 +31,16 @@ Take a look at the documentation at https://github.com/uber/ios-snapshot-test-ca
     |:---|:----|
     |`FB_REFERENCE_IMAGE_DIR`|`$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/ReferenceImages`|
     |`IMAGE_DIFF_DIR`|`$(SOURCE_ROOT)/$(PROJECT_NAME)Tests/FailureDiffs`|
+    
     ![](ENVIRONMETAL_VARIABLES.png)
 
-    Of course you can set any folder you want inside your project.
+    Of course you can set any folder you want inside your project, depending on where you want to save your Reference Images       that will be created from Screenshot Testing.
+
+
+#### Configuration:
+
+We have created some combination functions that takes care to test multiple devices and even multiple themes.
+With those configurations you will make sure that you cover Minor and Edge Cases that can strech your UI and also
+creating images can make a lot easier the communication with the Designer of the App.
+
+You can find the configuration files here
