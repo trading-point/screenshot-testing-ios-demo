@@ -7,6 +7,7 @@
 //
 
 import Foundation
+@testable import Snapshot_Testing
 
 enum SnapshotTestsConfig {
     static let devicesForViewControllerSnapshots = [Device.phone4inch,
@@ -18,17 +19,13 @@ enum SnapshotTestsConfig {
                                           Device.pad]
 }
 
-
-internal func viewSnapshotConfigCombos() -> [(Device)] {
-    let comboSmall = combos([Device.phone4inch])
-    let combosLarge = combos([Device.pad])
-    let combosForViewSnapshots = comboSmall + combosLarge
-    return combosForViewSnapshots
+internal func themeSnapshotConfigCombos() -> [Theme] {
+    return [Theme.light, Theme.dark]
 }
 
-internal func viewControllerSnapshotConfigCombos() -> [(Device, Theme)] {
-    let comboSmall = combos([Device.phone4inch, Device.phone4_7inch])
-    let combosLarge = combos([Device.phone5_8inch, Device.pad])
-    let combosForViewControllerSnapshots = comboSmall + combosLarge
-    return combosForViewControllerSnapshots
+internal func viewSnapshotConfigCombos() -> [(Device, Theme)] {
+    let combosLightTheme = combos([Device.phone4inch], [Theme.light])
+    let combosDarkTheme = combos([Device.pad], [Theme.dark])
+    let combosForViewSnapshots = combosDarkTheme + combosLightTheme
+    return combosForViewSnapshots
 }
