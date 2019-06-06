@@ -8,6 +8,12 @@
 
 /* Begin PBXBuildFile section */
 		4CFE253CEE2BE0F61AB76575 /* Pods_Snapshot_Testing.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FE73690B6FD339196985C537 /* Pods_Snapshot_Testing.framework */; };
+		6E9EA31522A9407200202BEE /* TestHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EA31422A9407200202BEE /* TestHelpers.swift */; };
+		6E9EA31722A940B800202BEE /* TraitController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EA31622A940B800202BEE /* TraitController.swift */; };
+		6E9EA31922A940DA00202BEE /* SnapshotTestsConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EA31822A940DA00202BEE /* SnapshotTestsConfig.swift */; };
+		6E9EA31D22A9449900202BEE /* ThemeManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EA31C22A9449900202BEE /* ThemeManager.swift */; };
+		6E9EA31F22A9477C00202BEE /* TestSuiteUserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EA31E22A9477C00202BEE /* TestSuiteUserDefaults.swift */; };
+		6E9EA32122A94B0300202BEE /* FBSnapshotTestCase+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6E9EA32022A94B0300202BEE /* FBSnapshotTestCase+Extras.swift */; };
 		E6912AE3E02908D2AE1CA22E /* Pods_SnapshotTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8FFA588284E7243811D8C678 /* Pods_SnapshotTests.framework */; };
 		FDB4134A2256609D00CAE36F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB413492256609D00CAE36F /* AppDelegate.swift */; };
 		FDB4134C2256609D00CAE36F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4134B2256609D00CAE36F /* ViewController.swift */; };
@@ -33,6 +39,12 @@
 
 /* Begin PBXFileReference section */
 		4A690EDF2B9ABAC0B451917D /* Pods-Snapshot Testing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapshot Testing.release.xcconfig"; path = "Target Support Files/Pods-Snapshot Testing/Pods-Snapshot Testing.release.xcconfig"; sourceTree = "<group>"; };
+		6E9EA31422A9407200202BEE /* TestHelpers.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelpers.swift; sourceTree = "<group>"; };
+		6E9EA31622A940B800202BEE /* TraitController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TraitController.swift; sourceTree = "<group>"; };
+		6E9EA31822A940DA00202BEE /* SnapshotTestsConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SnapshotTestsConfig.swift; sourceTree = "<group>"; };
+		6E9EA31C22A9449900202BEE /* ThemeManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThemeManager.swift; sourceTree = "<group>"; };
+		6E9EA31E22A9477C00202BEE /* TestSuiteUserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestSuiteUserDefaults.swift; sourceTree = "<group>"; };
+		6E9EA32022A94B0300202BEE /* FBSnapshotTestCase+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FBSnapshotTestCase+Extras.swift"; sourceTree = "<group>"; };
 		8FFA588284E7243811D8C678 /* Pods_SnapshotTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapshotTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		909388D6F692DD868858E59E /* Pods-Snapshot Testing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Snapshot Testing.debug.xcconfig"; path = "Target Support Files/Pods-Snapshot Testing/Pods-Snapshot Testing.debug.xcconfig"; sourceTree = "<group>"; };
 		D5F00C667565E89EF849DEE2 /* Pods-SnapshotTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SnapshotTests.release.xcconfig"; path = "Target Support Files/Pods-SnapshotTests/Pods-SnapshotTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -85,6 +97,16 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		6E9EA31322A9406000202BEE /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				6E9EA31422A9407200202BEE /* TestHelpers.swift */,
+				6E9EA31E22A9477C00202BEE /* TestSuiteUserDefaults.swift */,
+				6E9EA32022A94B0300202BEE /* FBSnapshotTestCase+Extras.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		B43766A9A2C50E95EBD6A85D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -124,6 +146,7 @@
 				FDB413502256609E00CAE36F /* Assets.xcassets */,
 				FDB413522256609E00CAE36F /* LaunchScreen.storyboard */,
 				FDB413552256609E00CAE36F /* Info.plist */,
+				6E9EA31C22A9449900202BEE /* ThemeManager.swift */,
 			);
 			path = "Snapshot Testing";
 			sourceTree = "<group>";
@@ -131,8 +154,11 @@
 		FDB413602256611000CAE36F /* SnapshotTests */ = {
 			isa = PBXGroup;
 			children = (
+				6E9EA31322A9406000202BEE /* Helpers */,
 				FDB413612256611000CAE36F /* SnapshotTests.swift */,
 				FDB413632256611000CAE36F /* Info.plist */,
+				6E9EA31622A940B800202BEE /* TraitController.swift */,
+				6E9EA31822A940DA00202BEE /* SnapshotTestsConfig.swift */,
 			);
 			path = SnapshotTests;
 			sourceTree = "<group>";
@@ -281,14 +307,12 @@
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-Snapshot Testing/Pods-Snapshot Testing-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
-				"${BUILT_PRODUCTS_DIR}/iOSSnapshotTestCase/FBSnapshotTestCase.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/FBSnapshotTestCase.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -352,6 +376,7 @@
 				FDB4134A2256609D00CAE36F /* AppDelegate.swift in Sources */,
 				FDB4136E225662C300CAE36F /* MarketHoursRangeView.swift in Sources */,
 				FDB41371225662C300CAE36F /* Helper.swift in Sources */,
+				6E9EA31D22A9449900202BEE /* ThemeManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,6 +385,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				FDB413622256611000CAE36F /* SnapshotTests.swift in Sources */,
+				6E9EA31F22A9477C00202BEE /* TestSuiteUserDefaults.swift in Sources */,
+				6E9EA31922A940DA00202BEE /* SnapshotTestsConfig.swift in Sources */,
+				6E9EA31522A9407200202BEE /* TestHelpers.swift in Sources */,
+				6E9EA32122A94B0300202BEE /* FBSnapshotTestCase+Extras.swift in Sources */,
+				6E9EA31722A940B800202BEE /* TraitController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -515,14 +545,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z26DLCEZHB;
 				INFOPLIST_FILE = "Snapshot Testing/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xm.Snapshot-Testing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -533,14 +565,16 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Z26DLCEZHB;
 				INFOPLIST_FILE = "Snapshot Testing/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.xm.Snapshot-Testing";
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -559,7 +593,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xm.SnapshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snapshot Testing.app/Snapshot Testing";
 			};
@@ -579,7 +613,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.xm.SnapshotTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 5.0;
+				SWIFT_VERSION = 4.2;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Snapshot Testing.app/Snapshot Testing";
 			};

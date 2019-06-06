@@ -26,6 +26,8 @@ class MarketHoursView: UIView {
         addSubviews()
         addConstraints()
         setUpViews()
+        performUpdatesForNeedsRedrawing()
+        NotificationCenter.default.addObserver(self, selector: #selector(performUpdatesForNeedsRedrawing), name: Notification.Name("com.xm.notification.name.UI.needsRedrawing"), object: nil)
     }
     
     func setUpViews() {
@@ -33,6 +35,7 @@ class MarketHoursView: UIView {
         guard let marketDisplayInfo = self.marketDisplayInfo else { return }
         self.setUpForMarketStatus(isOpen: marketDisplayInfo.isOpen)
         self.nextMarketStatusChangeLabel.text = marketDisplayInfo.nextMarketStatusChangeText
+        performUpdatesForNeedsRedrawing()
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -100,6 +103,10 @@ class MarketHoursView: UIView {
         self.nextMarketStatusChangeLabel.text = marketDisplayInfo.nextMarketStatusChangeText
     }
     
+    
+    @objc func performUpdatesForNeedsRedrawing() {
+        backgroundColor = ThemeManager.sharedInstance.currentTheme.white
+    }
     // MARK: - Private Methods
     
     private func setUpRangeViews(forMarketHoursSessions marketHoursSessions: [MarketHoursSession]) {

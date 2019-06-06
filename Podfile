@@ -6,7 +6,6 @@ target 'Snapshot Testing' do
   use_frameworks!
 
   # Pods for Snapshot Testing
-  pod 'iOSSnapshotTestCase'
   pod 'SnapKit'
 
   target 'SnapshotTests' do
